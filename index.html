@@ -2,124 +2,190 @@
 <html lang="pl">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Moje Bio Portfolio</title>
-
+ 
 <style>
-body {
-  font-family: Arial, sans-serif;
-  background: #f4f4f4;
-  margin: 0;
-}
-
-header {
-  background: #222;
-  color: white;
-  padding: 20px;
-  text-align: center;
-}
-
-nav {
-  background: #444;
-  padding: 10px;
-  text-align: center;
-}
-
-nav a {
-  color: white;
-  margin: 15px;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-nav a:hover {
-  text-decoration: underline;
-}
-
-section {
-  padding: 40px;
-  max-width: 900px;
-  margin: auto;
-  background: white;
-  margin-top: 20px;
-  border-radius: 10px;
-}
-
-.project {
-  background: #eee;
-  padding: 15px;
-  margin: 10px 0;
-  border-radius: 6px;
-}
-
-footer {
-  text-align: center;
-  padding: 20px;
-  margin-top: 20px;
-  background: #222;
-  color: white;
-}
+  /* Podstawowe style */
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background: #f0f2f5;
+    margin: 0;
+    color: #333;
+  }
+ 
+  header {
+    background: #1a1a2e;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+  }
+ 
+  header h1 { margin: 0; font-size: 1.5rem; }
+ 
+  nav {
+    background: #16213e;
+    padding: 15px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+ 
+  nav a {
+    color: #e94560;
+    margin: 0 20px;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: 0.3s;
+  }
+ 
+  nav a:hover {
+    color: white;
+  }
+ 
+  /* Logika zakładek - ukrywanie sekcji */
+  section {
+    display: none; /* Domyślnie ukrywamy wszystkie sekcje */
+    padding: 40px 20px;
+    max-width: 800px;
+    margin: 20px auto;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  }
+ 
+  /* Wyświetl sekcję, gdy jej ID pojawi się w adresie URL (#) */
+  section:target {
+    display: block;
+    animation: fadeIn 0.5s;
+  }
+ 
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+ 
+  /* Ekran powitalny (widoczny tylko gdy nie wybrano żadnej zakładki) */
+  #home {
+    display: block;
+    text-align: center;
+    background: none;
+    box-shadow: none;
+  }
+  /* Jeśli jakakolwiek sekcja jest aktywna, ukryj ekran powitalny */
+  body:has(section:target) #home {
+    display: none;
+  }
+ 
+  .project, .post-preview {
+    background: #f8f9fa;
+    padding: 20px;
+    margin: 15px 0;
+    border-left: 5px solid #e94560;
+    border-radius: 5px;
+  }
+ 
+  .btn {
+    display: inline-block;
+    margin-top: 10px;
+    color: #0f3460;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem;
+  }
+ 
+  .btn:hover { text-decoration: underline; }
+ 
+  footer {
+    text-align: center;
+    padding: 30px;
+    color: #666;
+    font-size: 0.9rem;
+  }
 </style>
 </head>
-
+ 
 <body>
-
+ 
 <header>
-  <p><strong>Moje bio • Projekty • Blog</strong></p>
+  <h1><a href="#" style="color: white; text-decoration: none;">MOJE PORTFOLIO</a></h1>
 </header>
-
+ 
 <nav>
   <a href="#bio">O mnie</a>
   <a href="#projekty">Projekty</a>
   <a href="#blog">Blog</a>
 </nav>
-
-<!-- Sekcja O mnie -->
+ 
+<section id="home">
+  <h2>Witaj na mojej stronie</h2>
+  <p>Wybierz jedną z zakładek powyżej, aby dowiedzieć się więcej.</p>
+</section>
+ 
 <section id="bio">
   <h2>O mnie</h2>
-  <p>Cześć! Nazywam się Jan Kowalski. Jestem pasjonatem technologii, programowania i tworzenia stron internetowych. Uwielbiam uczyć się nowych rzeczy i dzielić się wiedzą z innymi. Na tym blogu znajdziesz moje przemyślenia, inspiracje oraz kulisy moich projektów.</p>
-  <p>Poza komputerem lubię fotografię, góry i dobrą kawę ☕</p>
+  <p>Cześć! Jestem pasjonatem technologii, programowania i tworzenia stron internetowych.</p>
+  <p>Na tym blogu znajdziesz moje przemyślenia, inspiracje oraz kulisy moich projektów.</p>
+  <p>Lubię komputery i nowoczesne rozwiązania webowe.</p>
 </section>
-
-<!-- Sekcja Projekty -->
+ 
 <section id="projekty">
   <h2>Moje projekty</h2>
-  
+ 
   <div class="project">
     <h3>Portfolio Web</h3>
     <p>Strona prezentująca moje prace – od prostych stron HTML po zaawansowane aplikacje w JavaScript.</p>
   </div>
-  
+ 
   <div class="project">
     <h3>Blog technologiczny</h3>
     <p>Cykl artykułów o nauce front-endu od zera. Znajdziesz tam porady oraz przykładowe projekty.</p>
   </div>
-  
+ 
   <div class="project">
     <h3>Mini gra przeglądarkowa</h3>
-    <p>Stworzona w JavaScript gra logiczna, w której liczy się refleks i strategia. Idealna na krótką przerwę!</p>
+    <p>Stworzona w JavaScript gra logiczna, w której liczy się refleks i strategia.</p>
   </div>
 </section>
-
-<!-- Sekcja Blog -->
+ 
 <section id="blog">
   <h2>Blog</h2>
-  <article>
+ 
+  <div class="post-preview">
     <h3>Jak zacząć przygodę z programowaniem?</h3>
-    <p>Najważniejsze to wybrać mały projekt i po prostu zacząć! W tym wpisie opowiadam o swoich pierwszych krokach z HTML i CSS.</p>
-  </article>
-
-  <article>
+    <p>Krótki opis tego, jak zacząć pisać kod...</p>
+    <a href="#artykul1" class="btn">Czytaj więcej →</a>
+  </div>
+ 
+  <div class="post-preview">
     <h3>Dlaczego warto tworzyć portfolio?</h3>
-    <p>Portfolio pokazuje Twoje umiejętności w praktyce – to coś więcej niż CV. To Twoja wizytówka w świecie IT.</p>
-  </article>
-
-  <article>
-    <h3>Moje ulubione narzędzia programistyczne</h3>
-    <p>Od Visual Studio Code po GitHub – opisuję narzędzia, które ułatwiają mi codzienną pracę z kodem.</p>
-  </article>
+    <p>Dowiedz się, dlaczego Twoja własna strona jest ważna...</p>
+    <a href="#artykul2" class="btn">Czytaj więcej →</a>
+  </div>
 </section>
-
-
+ 
+<section id="artykul1">
+  <h2>Jak zacząć przygodę z programowaniem?</h2>
+  <p>To jest pełna treść pierwszego artykułu.</p>
+  <p>Najważniejsze to wybrać mały projekt i po prostu zacząć! Moja przygoda zaczęła się od zmiany kolorów tekstu w HTML.</p>
+  <a href="#blog" class="btn">← Powrót do listy wpisów</a>
+</section>
+ 
+<section id="artykul2">
+  <h2>Dlaczego warto tworzyć portfolio?</h2>
+  <p>To jest pełna treść drugiego artykułu.</p>
+  <p>Portfolio pokazuje Twoje umiejętności w praktyce – to coś więcej niż CV. To Twoja wizytówka w świecie IT.</p>
+  <a href="#blog" class="btn">← Powrót do listy wpisów</a>
+</section>
+ 
+<footer>
+  <p>&copy; 2024 Moje Bio Portfolio. Stworzone z pasją.</p>
+</footer>
+ 
 </body>
 </html>
-
+ 
