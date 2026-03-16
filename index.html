@@ -1,75 +1,125 @@
-
 <!DOCTYPE html>
 <html lang="pl">
 <head>
 <meta charset="UTF-8">
 <title>Moje Bio Portfolio</title>
- 
+
 <style>
- 
-body{
-font-family: Arial;
-background:#f4f4f4;
-margin:0;
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  margin: 0;
 }
- 
-header{
-background:#222;
-color:white;
-padding:20px;
-text-align:center;
+
+header {
+  background: #222;
+  color: white;
+  padding: 20px;
+  text-align: center;
 }
- 
-nav{
-background:#444;
-padding:10px;
-text-align:center;
+
+nav {
+  background: #444;
+  padding: 10px;
+  text-align: center;
 }
- 
-nav a{
-color:white;
-margin:15px;
-text-decoration:none;
-font-weight:bold;
+
+nav a {
+  color: white;
+  margin: 15px;
+  text-decoration: none;
+  font-weight: bold;
 }
- 
-section{
-padding:40px;
-max-width:900px;
-margin:auto;
-background:white;
-margin-top:20px;
-border-radius:10px;
+
+nav a:hover {
+  text-decoration: underline;
 }
- 
-.project{
-background:#eee;
-padding:15px;
-margin:10px 0;
-border-radius:6px;
+
+section {
+  padding: 40px;
+  max-width: 900px;
+  margin: auto;
+  background: white;
+  margin-top: 20px;
+  border-radius: 10px;
 }
- 
-footer{
-text-align:center;
-padding:20px;
-margin-top:20px;
-background:#222;
-color:white;
+
+.project {
+  background: #eee;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 6px;
 }
- 
+
+footer {
+  text-align: center;
+  padding: 20px;
+  margin-top: 20px;
+  background: #222;
+  color: white;
+}
 </style>
 </head>
- 
+
 <body>
- 
+
 <header>
-<p>Moje bio • Projekty • Blog</p>
+  <p><strong>Moje bio • Projekty • Blog</strong></p>
 </header>
- 
+
 <nav>
-<a href="#bio">O mnie</a>
-<a href="#projekty">Projekty</a>
-<a href="#blog">Blog</a>
+  <a href="#bio">O mnie</a>
+  <a href="#projekty">Projekty</a>
+  <a href="#blog">Blog</a>
 </nav>
+
+<!-- Sekcja O mnie -->
+<section id="bio">
+  <h2>O mnie</h2>
+  <p>Cześć! Nazywam się Jan Kowalski. Jestem pasjonatem technologii, programowania i tworzenia stron internetowych. Uwielbiam uczyć się nowych rzeczy i dzielić się wiedzą z innymi. Na tym blogu znajdziesz moje przemyślenia, inspiracje oraz kulisy moich projektów.</p>
+  <p>Poza komputerem lubię fotografię, góry i dobrą kawę ☕</p>
+</section>
+
+<!-- Sekcja Projekty -->
+<section id="projekty">
+  <h2>Moje projekty</h2>
+  
+  <div class="project">
+    <h3>Portfolio Web</h3>
+    <p>Strona prezentująca moje prace – od prostych stron HTML po zaawansowane aplikacje w JavaScript.</p>
+  </div>
+  
+  <div class="project">
+    <h3>Blog technologiczny</h3>
+    <p>Cykl artykułów o nauce front-endu od zera. Znajdziesz tam porady oraz przykładowe projekty.</p>
+  </div>
+  
+  <div class="project">
+    <h3>Mini gra przeglądarkowa</h3>
+    <p>Stworzona w JavaScript gra logiczna, w której liczy się refleks i strategia. Idealna na krótką przerwę!</p>
+  </div>
+</section>
+
+<!-- Sekcja Blog -->
+<section id="blog">
+  <h2>Blog</h2>
+  <article>
+    <h3>Jak zacząć przygodę z programowaniem?</h3>
+    <p>Najważniejsze to wybrać mały projekt i po prostu zacząć! W tym wpisie opowiadam o swoich pierwszych krokach z HTML i CSS.</p>
+  </article>
+
+  <article>
+    <h3>Dlaczego warto tworzyć portfolio?</h3>
+    <p>Portfolio pokazuje Twoje umiejętności w praktyce – to coś więcej niż CV. To Twoja wizytówka w świecie IT.</p>
+  </article>
+
+  <article>
+    <h3>Moje ulubione narzędzia programistyczne</h3>
+    <p>Od Visual Studio Code po GitHub – opisuję narzędzia, które ułatwiają mi codzienną pracę z kodem.</p>
+  </article>
+</section>
+
+
 </body>
 </html>
+
