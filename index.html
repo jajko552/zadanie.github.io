@@ -34,7 +34,6 @@
     font-weight: bold;
   }
  
-  /* Sekcje są ukryte */
   section {
     display: none;
     max-width: 800px;
@@ -43,18 +42,15 @@
     border: 1px solid #cccccc;
   }
  
-  /* Pokazywanie sekcji przez kliknięcie w menu */
   section:target {
     display: block;
   }
  
-  /* Strona główna widoczna na start */
   #start {
     display: block;
     text-align: center;
   }
  
-  /* Ukryj start gdy coś wybierzemy */
   body:has(section:target) #start {
     display: none;
   }
@@ -78,7 +74,7 @@
 <body>
  
 <header>
-  <p><strong>MOJE BIO / PROJEKTY / BLOG</strong></p>
+  <p><strong>Strona o mnie</strong></p>
 </header>
  
 <nav>
@@ -134,10 +130,5 @@
   <p>Tutaj znajdują się opisy moich mniejszych zadań i ćwiczeń z kodowania.</p>
   <a href="#blog">Powrót do bloga</a>
 </section>
- 
-<footer>
-  <p>Strona portfolio - 2024</p>
-</footer>
- 
 </body>
 </html>
