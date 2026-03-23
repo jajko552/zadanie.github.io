@@ -3,132 +3,23 @@
 <head>
 <meta charset="UTF-8">
 <title>Moje Portfolio</title>
- 
-<style>
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #ffffff;
-    color: #333333;
-    margin: 0;
-    padding: 0;
-  }
- 
-  header {
-    background-color: #dddddd;
-    padding: 10px;
-    text-align: center;
-    border-bottom: 1px solid #bbbbbb;
-  }
- 
-  nav {
-    background-color: #eeeeee;
-    padding: 10px;
-    text-align: center;
-    border-bottom: 1px solid #bbbbbb;
-  }
- 
-  nav a {
-    color: #333333;
-    margin: 0 10px;
-    text-decoration: none;
-    font-weight: bold;
-  }
- 
-  section {
-    display: none;
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    border: 1px solid #cccccc;
-  }
- 
-  section:target {
-    display: block;
-  }
- 
-  #start {
-    display: block;
-    text-align: center;
-  }
- 
-  body:has(section:target) #start {
-    display: none;
-  }
- 
-  .blok {
-    border: 1px solid #dddddd;
-    padding: 10px;
-    margin: 10px 0;
-    background-color: #f9f9f9;
-  }
- 
-  footer {
-    text-align: center;
-    margin-top: 50px;
-    font-size: 12px;
-    color: #999999;
-  }
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
- 
 <body>
- 
 <header>
-  <p><strong>Strona o mnie</strong></p>
+  <h1>Moje Portfolio</h1>
 </header>
- 
 <nav>
-  <a href="#bio">O mnie</a>
-  <a href="#projekty">Projekty</a>
-  <a href="#blog">Blog</a>
+  <a href="bio.html">O mnie</a>
+  <a href="projekty.html">Projekty</a>
+  <a href="blog.html">Blog</a>
 </nav>
- 
-<section id="start">
-  <p>Witaj. Wybierz zakładkę z menu, aby zobaczyć treść.</p>
-</section>
- 
-<section id="bio">
-  <h2>O mnie</h2>
-  <p>Cześć! Jestem pasjonatem technologii, programowania i tworzenia stron internetowych.</p>
-  <p>Lubię komputery.</p>
-</section>
- 
-<section id="projekty">
-  <h2>Moje projekty</h2>
-  <div class="blok">
-    <p><strong>Projekt 1:</strong> Moja pierwsza strona w HTML.</p>
-  </div>
-  <div class="blok">
-    <p><strong>Projekt 2:</strong> Prosta gra w JavaScript.</p>
-  </div>
-</section>
- 
-<section id="blog">
-  <h2>Blog</h2>
- 
-  <div class="blok">
-    <p><strong>Wpis 1: O mnie (Kopia)</strong></p>
-    <p>Cześć! Jestem pasjonatem technologii, programowania i tworzenia stron internetowych. Lubię komputery.</p>
-    <a href="#wpis-o-mnie">Czytaj więcej</a>
-  </div>
- 
-  <div class="blok">
-    <p><strong>Wpis 2: Inne prace</strong></p>
-    <p>Tutaj opisuję moje inne prace i naukę CSS.</p>
-    <a href="#wpis-prace">Czytaj więcej</a>
-  </div>
-</section>
- 
-<section id="wpis-o-mnie">
-  <h2>O mnie - Pełny wpis</h2>
-  <p>To jest treść skopiowana z sekcji O mnie. Jestem pasjonatem technologii i lubię tworzyć strony.</p>
-  <a href="#blog">Powrót do bloga</a>
-</section>
- 
-<section id="wpis-prace">
-  <h2>Moje inne prace</h2>
-  <p>Tutaj znajdują się opisy moich mniejszych zadań i ćwiczeń z kodowania.</p>
-  <a href="#blog">Powrót do bloga</a>
-</section>
+<div class="container">
+  <h2>Witaj!</h2>
+  <p>To moja strona portfolio. Wybierz zakładkę z menu.</p>
+</div>
+<footer>
+  <p>© 2026 Moje Portfolio</p>
+</footer>
 </body>
 </html>
